@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Documentation and data-use information for the Tweak Relay owner's YouTube Operations utility."><title>Privacy policy | YouTube Operations</title><style>
+:root{color-scheme:light;--ink:#132a36;--muted:#4c626c;--accent:#006b65;--line:#d9e3e6;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:.2em}a:focus-visible{outline:3px solid #f4a340;outline-offset:5px}
+.wrap{max-width:960px;margin:auto;padding:0 28px}header{background:var(--paper);border-bottom:1px solid var(--line)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0}.brand{text-decoration:none;color:var(--ink);font-weight:750;letter-spacing:.03em}
+nav{display:flex;gap:24px;flex-wrap:wrap;font-size:15px}nav a[aria-current=page]{font-weight:750}main{padding-top:54px;padding-bottom:54px}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:13px;color:var(--accent);font-weight:750;margin:0 0 14px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.14;letter-spacing:-.035em;margin:0 0 18px}h2{font-size:23px;line-height:1.35;margin:0 0 14px}
+h3{font-size:18px;margin:22px 0 8px}p{margin:0 0 16px}.lead{font-size:21px;max-width:740px;color:var(--muted)}.meta{font-size:14px;color:var(--muted)}
+.panel{background:var(--paper);padding:28px;border:1px solid var(--line);border-radius:14px;margin-top:24px}.notice{border-left:5px solid var(--accent)}
+ul,ol{padding-left:24px;margin:10px 0 18px}li+li{margin-top:7px}.panel>:last-child{margin-bottom:0}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:14px 12px}th{font-weight:700}th:first-child,td:first-child{padding-left:0;width:28%}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}.button{display:inline-block;padding:10px 17px;border:1px solid var(--accent);border-radius:7px;font-weight:650;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:24px 0 32px;font-size:14px;color:var(--muted)}footer p{margin-bottom:8px}.skip{position:absolute;left:12px;top:-80px;background:white;padding:10px;z-index:2}.skip:focus{top:12px}
+@media(max-width:600px){.wrap{padding:0 18px}.top{align-items:flex-start;flex-direction:column;gap:12px}nav{gap:18px}main{padding-top:34px}.panel{padding:21px}.lead{font-size:19px}th,td{padding:12px 8px}}
+@media print{body{background:white;font-size:11pt}.wrap{max-width:none}nav,.skip{display:none}main{padding-top:20px}.panel{break-inside:avoid;border-radius:0}h1{font-size:27pt}.button{border:0;padding:0}}
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><div class="top"><a class="brand" href="index.html">TWEAK RELAY / OPERATIONS</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav></div></div></header>
+<main id="main" class="wrap">
+<p class="eyebrow">YouTube Operations</p><h1>Privacy policy</h1>
+<p class="lead">How the owner-operated upload utility handles Google account, Drive, and YouTube data.</p>
+<p class="meta">Last updated: 4 October 2026 · Operator: Tweak Relay</p>
+<section class="panel"><h2>1. Scope</h2>
+<p>This policy covers the YouTube Operations uploader running in the operator’s Google Apps Script project, and this documentation website. The utility uses YouTube API Services and Google Drive. It is currently limited to a designated owner account and channel.</p>
+<p>Separate video-production or assistant services are outside this uploader. The uploader itself sends API requests only to Google services and does not send account data to an AI service.</p></section>
+<section class="panel"><h2>2. Data accessed and purposes</h2>
+<ul><li><strong>Account email:</strong> used to check the operator’s identity against the configured account.</li>
+<li><strong>Drive data:</strong> designated folder and file identifiers, file name, media type, size, parent-folder information, and the selected video bytes. These checks identify the intended file and verify its integrity.</li>
+<li><strong>YouTube data:</strong> the authorized channel’s identifier, handle and upload-list reference; recent upload metadata needed to identify an earlier test; and the selected video’s identifier, title, tags, visibility and processing status.</li>
+<li><strong>Operational records:</strong> file references, integrity hashes, upload timestamps, state, and a resumable-upload session reference. These support recovery and help prevent duplicate uploads.</li></ul>
+<p>The current Drive permission is read-only and technically covers files available to the authorized account. The utility’s code limits actual reads to its configured folders and designated test video. It does not request Gmail access or Google passwords.</p></section>
+<section class="panel"><h2>3. Storage and service providers</h2>
+<p>The source video remains in the owner’s Google Drive. During an upload, Apps Script reads the file and sends its contents and upload metadata to YouTube. The current test upload is private.</p>
+<p>Upload-state records are stored in the owner’s Apps Script project properties. Execution logs may contain identifiers, timestamps, results, and error codes. Google manages the authorization flow; the utility does not put authorization tokens or upload-session references in its public reports.</p>
+<p>Google processes data as the provider of Apps Script, Drive and YouTube. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The operator does not sell Google user data, use it for advertising, or use it to train AI models.</p>
+<p>Google API data is used for the authorized upload workflow in accordance with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p></section>
+<section class="panel"><h2>4. Retention and deletion</h2>
+<p>Source files and uploaded videos remain under the owner’s control in Drive and YouTube until the owner changes or deletes them there. Removing this tool’s access does not itself delete those original files or uploaded videos.</p>
+<p>The setup utility keeps upload-state records to recognize prior attempts. It has no automatic cleanup job. While this setup release is in use, the operator must manually refresh or delete retained YouTube API data within 30 days. Unattended operation requires a tested retention and authorization-check process.</p>
+<p>The owner can stop using the utility and remove its stored state from the Apps Script project. Stop pending uploads before removing that state, because it is also used for duplicate prevention. Google service logs follow the applicable Google retention controls.</p>
+<p>Requests to delete application-stored personal or API data can be sent through the private contact method below. The operator will process deletion requests as soon as possible and within seven calendar days.</p></section>
+<section class="panel"><h2>5. Control and revoking access</h2>
+<p>The owner authorizes Google access and controls which script runs. Access can be revoked at any time from <a href="https://security.google.com/settings/security/permissions">Google account permissions</a>. Revocation prevents future authorized API access; deletion of existing application records is handled separately as described above.</p>
+<p>The operator must remove remaining authorized API records within 30 days of Google-side revocation, or within seven days of a direct deletion request. The setup release requires manual administration of this process.</p></section>
+<section class="panel"><h2>6. Visiting this website</h2>
+<p>This documentation website contains no sign-in form, advertising, embedded video, analytics tag, or custom tracking cookie. Its public repository contains the documentation files, not the uploader’s credentials or private operational records.</p>
+<p>GitHub Pages hosts the site. GitHub records visitor IP addresses for security purposes; its own practices are explained in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Links to other services are governed by those services’ policies.</p></section>
+<section class="panel"><h2>7. Questions and changes</h2>
+<p>For private account or data-deletion requests, use the support email displayed on this application’s Google authorization screen. The sole configured user is the operator, who can also manage the application records directly.</p>
+<p>For general documentation questions, contact the operator through <a href="https://github.com/tweakrelay-ops/tweakrelay-ops.github.io/issues">GitHub Issues</a>. Issues are public: do not include credentials, account email addresses, private files, or private video details.</p>
+<p>This policy will be updated before material changes to the utility’s data access or purposes. The owner must review and accept the updated policy before enabling those changes.</p></section>
+</main>
+<footer><div class="wrap"><p>YouTube Operations · Tweak Relay</p><p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="https://www.youtube.com/t/terms">YouTube Terms</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a></p></div></footer></body></html>
